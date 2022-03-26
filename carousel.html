@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Image Slider</title>
+        <link rel="stylesheet" href="carousel.css">
+    </head>
+    <body>
+    
+        <!--image slider start-->
+        <div class="slider">
+            <div class="slides">
+                <!--radio buttons start-->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <!--radio buttons end-->
+                <!--slide images start-->
+                <div class="slide first">
+                    <img src="https://images-ext-2.discordapp.net/external/9mYpO7--KoQ9hHpOMBODDoGyYF7pVHUUtjsJ2nNF8Qo/https/cdn.ontariohockeyleague.com/archive/ohl.assets/app/uploads/peterborough_petes/2019/01/08093349/Celebrity-Servers-with-Logo-730x548.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="https://cdn.ontariohockeyleague.com/uploads/peterborough_petes/2021/10/20174737/Program-app-1024x576.jpg" alt="">
+                </div>
+                <div class="slide">    
+                    <img src="https://cdn.ontariohockeyleague.com/uploads/peterborough_petes/2021/10/08113218/At-the-Rink-with-Roger-Facebook-Graphic-1024x538.jpg" alt="">
+                </div>
+                <!--slide images end-->
+                <!--automatic navigation start-->
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                </div>
+                <!--automatic navigation end-->
+            </div>
+            <!--manual navigation start-->
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+
+            </div>
+            <!--manual navigation end-->
+        </div>
+        <!--image slider end-->
+    
+        <script type="text/javascript">
+            let counter = 1;
+            setInterval(function()
+            {
+                document.getElementById('radio' + counter).checked = true;
+                counter++;
+                if (counter > 3) {
+                    counter = 1;
+                }
+            }, 5000);
+        </script>
+
+    </body>
+</html>
